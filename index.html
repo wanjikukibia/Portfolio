@@ -1,50 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susan Wanjiku - Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Susan Wanjiku Portfolio</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FBF8F1;
+      color: #714D40;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+    }
+
+    /* Layout */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #EADCD0;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .sidebar h1 {
+      font-size: 1.8rem;
+      color: #714D40;
+    }
+
+    .contact {
+      margin-top: 20px;
+    }
+
+    .contact div {
+      margin-bottom: 10px;
+    }
+
+    /* CV Download Button */
+    .cv-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #714D40;
+      color: #FBF8F1;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 20px;
+    }
+
+    .cv-button:hover {
+      background-color: #976F5F;
+    }
+
+    /* Main Content */
+    .main-content {
+      background: #FFF;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
+      font-size: 1.4rem;
+      color: #714D40;
+      border-bottom: 2px solid #D1BEB2;
+      padding-bottom: 5px;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid #D1BEB2;
+      margin: 20px 0;
+    }
+
+    .timeline .event {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .timeline .event::before {
+      content: '';
+      position: absolute;
+      left: -7px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background: #714D40;
+      border-radius: 50%;
+      border: 2px solid #D1BEB2;
+    }
+
+    .timeline .event p {
+      margin: 0;
+    }
+  </style>
 </head>
-<body></body>
-<section class="section" id="about">
-    <h2>About Me</h2>
-    <p>I am a final-year Bachelor of Business Information Technology (BBIT) student at Strathmore University with a passion for leveraging technology to solve real-world problems. Experienced in software development, database management, and system analysis, I am eager to contribute innovative and efficient solutions to the IT industry.</p>
-</section>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="profile.jpg" alt="Susan Wanjiku">
+      <h1>Susan Wanjiku</h1>
+      <p>Final-Year BBIT Student | Aspiring IT Professional</p>
+      <div class="contact">
+        <div>📞 0718 876 545</div>
+        <div>✉️ shikokibia@gmail.com</div>
+        <div>📍 Nairobi, Kenya</div>
+      </div>
+      <a href="Susan_Wanjiku_CV.pdf" download class="cv-button">Download CV</a>
+    </div>
 
-<section class="section" id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>Programming Languages: Java, PHP, Python</li>
-        <li>Database Management: MySQL, SQL Server</li>
-        <li>Web Development: HTML, CSS, Laravel framework</li>
-        <li>Data Analysis: Excel, SQL, Python (Pandas, NumPy)</li>
-        <li>System Analysis & Design: Requirements gathering, process mapping</li>
-        <li>Soft Skills: Team collaboration, communication, problem-solving, adaptability</li>
-    </ul>
-</section>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="section">
+        <h2>About Me</h2>
+        <p>
+          I am a final-year Bachelor of Business Information Technology (BBIT) student at Strathmore University. 
+          With hands-on experience in software development and system design, I aim to leverage technology 
+          to address business challenges. My expertise spans programming, database management, and web development.
+        </p>
+      </div>
 
-<section class="section" id="projects">
-    <h2>Projects</h2>
-    <h4>Inventory and Sales Management System</h4>
-    <p>Developed a system to manage inventory and sales processes, integrating features like reporting, logging, and printing functionalities.</p>
-    <h4>Data Analysis for Business Insights</h4>
-    <p>Performed sales data analysis to optimize pricing strategies and product categorization, using statistical models and Python libraries.</p>
-</section>
+      <div class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li>✔️ Programming: Java, PHP</li>
+          <li>✔️ Database Management: MySQL, SQL Server</li>
+          <li>✔️ Web Development: HTML, CSS, Laravel</li>
+          <li>✔️ System Analysis: Process Mapping, Requirements Gathering</li>
+          <li>✔️ Tools: Microsoft Office Suite</li>
+        </ul>
+      </div>
 
-<section class="section" id="resume">
-    <h2>Resume</h2>
-    <p><a href="Susan_Wanjiku_CV.pdf" class="btn btn-primary" download>Download My CV</a></p>
-</section>
+      <div class="section">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="event">
+            <strong>Strathmore University</strong>
+            <p>BBIT (2021 – 2025)</p>
+          </div>
+          <div class="event">
+            <strong>Mugoiri Girls High School</strong>
+            <p>(2016 – 2020)</p>
+          </div>
+          <div class="event">
+            <strong>Newlight Academy</strong>
+            <p>(2013 – 2016)</p>
+          </div>
+        </div>
+      </div>
 
-<section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:shikokibia@gmail.com">shikokibia@gmail.com</a></p>
-    <p>Phone: 0718 876 545</p>
-    <p>Location: Nairobi, Kenya</p>
-</section>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <div class="section">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+          <div class="event">
+            <h4>Inventory & Sales Management System</h4>
+            Developed a system to manage inventory and sales processes, integrating features like reporting, logging, and printing functionalities.
+          </div>
+          <div class="event">
+            <h4>Data Analysis for Business Insights</h4>
+            Performed sales data analysis to optimize pricing strategies and product categorization, using statistical models and Python libraries.
+          </div>
+          <div class="event">
+            <strong>Eclectics International Limited</strong>
+            <p>Intern (Feb 2024 – April 2024)</p>
+            Supported the testing and implementation of software solutions for clients. Participated in troubleshooting and debugging system errors.
+          </div>
+          <div class="event">
+            <strong>Texas Cancer Center</strong>
+            <p>Volunteer (Jan 2023 – April 2023)</p>
+            Organized and managed patient supplies, ensuring accessibility and efficiency.
+          </div>
+        </div>
+      </div>
 
+      <div class="section">
+        <h2>Hobbies & Interests</h2>
+        <ul>
+          <li>💻 Software Development & Coding Challenges</li>
+          <li>📊 Data Analytics & Visualization</li>
+          <li>🚀 Exploring AI & Machine Learning</li>
+          <li>📚 Reading Tech Blogs & Research Papers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
+</html>
