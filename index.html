@@ -19,22 +19,25 @@
       margin: 0;
     }
 
-    /* Layout */
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 20px;
-      max-width: 1200px;
-      margin: 20px auto;
+    ul {
+      padding: 0;
+      list-style: none;
     }
 
-    /* Sidebar */
-    .sidebar {
-      background-color: #EADCD0;
-      padding: 20px;
+    /* Layout */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      border-radius: 10px;
-      position: relative;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Sidebar/Profile Section */
+    .sidebar {
+      margin-bottom: 20px;
     }
 
     .sidebar img {
@@ -45,22 +48,22 @@
     }
 
     .sidebar h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #714D40;
     }
 
-    .contact {
-      margin-top: 20px;
+    .sidebar p {
+      font-size: 1rem;
+      margin: 5px 0;
     }
 
     .contact div {
       margin-bottom: 10px;
     }
 
-    /* CV Download Button */
     .cv-button {
       display: inline-block;
-      margin-top: 30px;
+      margin-top: 15px;
       padding: 10px 20px;
       background-color: #714D40;
       color: #FBF8F1;
@@ -68,10 +71,6 @@
       text-decoration: none;
       border-radius: 5px;
       transition: 0.3s;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 20px;
     }
 
     .cv-button:hover {
@@ -84,6 +83,8 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
     }
 
     .section {
@@ -91,39 +92,61 @@
     }
 
     .section h2 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: #714D40;
+      margin-bottom: 10px;
+      text-align: left;
       border-bottom: 2px solid #D1BEB2;
       padding-bottom: 5px;
     }
 
-    /* Timeline */
     .timeline {
       position: relative;
-      padding-left: 20px;
-      border-left: 2px solid #D1BEB2;
       margin: 20px 0;
     }
 
     .timeline .event {
-      position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+      text-align: left;
     }
 
-    .timeline .event::before {
-      content: '';
-      position: absolute;
-      left: -7px;
-      top: 0;
-      width: 12px;
-      height: 12px;
-      background: #714D40;
-      border-radius: 50%;
-      border: 2px solid #D1BEB2;
+    .timeline .event h4 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #714D40;
     }
 
     .timeline .event p {
       margin: 0;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      .sidebar img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .sidebar h1 {
+        font-size: 1.6rem;
+      }
+
+      .main-content {
+        padding: 15px;
+      }
+
+      .section h2 {
+        font-size: 1.3rem;
+      }
+
+      .cv-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -197,11 +220,6 @@
             <strong>Eclectics International Limited</strong>
             <p>Intern (Feb 2024 – April 2024)</p>
             Supported the testing and implementation of software solutions for clients. Participated in troubleshooting and debugging system errors.
-          </div>
-          <div class="event">
-            <strong>Texas Cancer Center</strong>
-            <p>Volunteer (Jan 2023 – April 2023)</p>
-            Organized and managed patient supplies, ensuring accessibility and efficiency.
           </div>
         </div>
       </div>
